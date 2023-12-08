@@ -2,7 +2,6 @@
 
 This script manages employee ratings using a simple menu-driven interface.
 
-# Data -------------------------------------------- #
 FILE_NAME: str = 'EmployeeRatings.json'
 
 MENU: str = '''
