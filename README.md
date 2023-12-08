@@ -2,16 +2,16 @@
 
 This script manages employee ratings using a simple menu-driven interface.
 
-  FILE_NAME: str = 'EmployeeRatings.json'
-  
-  MENU: str = 
-  ---- Employee Ratings ------------------------------
-    Select from the following menu:
-      1. Show current employee rating data.
-      2. Enter new employee rating data.
-      3. Save data to a file.
-      4. Exit the program.
-  --------------------------------------------------
+    FILE_NAME: str = 'EmployeeRatings.json'
+    
+    MENU: str = 
+    ---- Employee Ratings ------------------------------
+      Select from the following menu:
+        1. Show current employee rating data.
+        2. Enter new employee rating data.
+        3. Save data to a file.
+        4. Exit the program.
+    --------------------------------------------------
   
 
 employees: list = []  # a table of employee data
