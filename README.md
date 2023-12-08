@@ -28,7 +28,7 @@ menu_choice: A variable initialized to an empty string, which will be used to st
 Main Body Section
 
 # Beginning of the main body of this script
-employees = FileProcessor.read_employee_data_from_file(file_name=FILE_NAME,
+        employees = FileProcessor.read_employee_data_from_file(file_name=FILE_NAME,
                                                        employee_data=employees,
                                                        employee_type=Employee)  # Note this is the class name (ignore the warning)
 
