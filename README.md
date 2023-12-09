@@ -14,9 +14,6 @@ This script manages employee ratings using a simple menu-driven interface.
     --------------------------------------------------
     '''
 
-employees: list = []  # a table of employee data
-menu_choice = ''
-
 FILE_NAME: This variable stores the name of the file ('EmployeeRatings.json') where employee data will be read from and saved to.
 
 MENU: A multiline string representing the menu options for the user interface. This will be displayed to the user so they can choose an action.
@@ -26,7 +23,6 @@ employees: An empty list that will be used to store employee data. This list wil
 menu_choice: A variable initialized to an empty string, which will be used to store the user's menu choice.
 
 Main Body Section
-
 # Beginning of the main body of this script
         employees = FileProcessor.read_employee_data_from_file(file_name=FILE_NAME,
                                                        employee_data=employees,
