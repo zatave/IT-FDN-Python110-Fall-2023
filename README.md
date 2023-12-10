@@ -1,3 +1,9 @@
+# Creating Applications
+
+## Ovierview 
+
+This assignment will demonstrate multi-module applications in Python. 
+
 # Employee Ratings Management
 
 This script manages employee ratings using a simple menu-driven interface.
