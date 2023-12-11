@@ -81,3 +81,86 @@ Option "2": Allows the user to input new employee data using IO.input_employee_d
 Option "3": Saves the current employee data to the file using FileProcessor.write_employee_data_to_file and informs the user about the successful operation. Exception handling is included.
 Option "4": Breaks out of the while loop, ending the program.
 This script essentially provides a user-friendly interface for managing employee ratings, with options to view, input, and save data. Error handling is implemented to ensure that any issues encountered during file operations or data display are gracefully handled.
+
+
+
+# Unit Test Script for presentation_classes.IO
+
+## Description
+This script holds unit tests for methods within the `IO` class from the `presentation_classes` module. the tests cover input and ouput funcions for error messages, menu output, and processing input of employee data. 
+
+## Test Cases
+
+### 1. `test_output_error_messages`
+   - **Description:** Tests the `output_error_messages` method.
+   - **Setup:** Initializes an instance of the `IO` class and an empty list for employee data.
+   - **Test Steps:**
+     1. Calls `output_error_messages` with a sample error message.
+     2. Asserts that the `print` function is called once with the correct parameters.
+
+### 2. `test_output_error_messages_with_exception`
+   - **Description:** Tests the `output_error_messages` method with an exception.
+   - **Setup:** Initializes an instance of the `IO` class and an empty list for employee data.
+   - **Test Steps:**
+     1. Calls `output_error_messages` with a sample error message and an exception.
+     2. Constructs the expected output and asserts that the `print` function is called once with the correct parameters.
+
+### 3. `test_output_menu`
+   - **Description:** Tests the `output_menu` method.
+   - **Setup:** Initializes an instance of the `IO` class and an empty list for employee data.
+   - **Test Steps:**
+     1. Calls `output_menu` with a sample menu string.
+     2. Asserts that the `print` function is called once with the correct parameters.
+
+### 4. `test_input_menu_choice`
+   - **Description:** Tests the `input_menu_choice` method.
+   - **Setup:** Initializes an instance of the `IO` class and an empty list for employee data.
+   - **Test Steps:**
+     1. Uses the `input` function to simulate user input ("2").
+     2. Calls `input_menu_choice` and asserts that the returned value matches the expected input.
+
+### 5. `test_input_menu_choice_invalid_choice`
+   - **Description:** Tests the `input_menu_choice` method with invalid user input.
+   - **Setup:** Initializes an instance of the `IO` class and an empty list for employee data.
+   - **Test Steps:**
+     1. Uses the `input` function to simulate user input ("5").
+     2. Calls `input_menu_choice` and asserts that the returned value matches the expected input.
+     3. Asserts that the `print` function is called once with a specific error message.
+
+### 6. `test_output_employee_data`
+   - **Description:** Tests the `output_employee_data` method.
+   - **Setup:** Initializes an instance of the `IO` class and an empty list for employee data.
+   - **Test Steps:**
+     1. Creates a sample list of `Employee` objects.
+     2. Calls `output_employee_data` with the sample employee data.
+     3. Constructs the expected output and asserts that the `print` function is called once with the correct parameters.
+
+### 7. `test_input_employee_data`
+   - **Description:** Tests the `input_employee_data` method with valid input.
+   - **Setup:** Initializes an instance of the `IO` class and an empty list for employee data.
+   - **Test Steps:**
+     1. Uses the `input` function to simulate user input for a new employee.
+     2. Calls `input_employee_data` and asserts the correctness of the returned employee data.
+
+### 8. `test_input_employee_data_value_error`
+   - **Description:** Tests the `input_employee_data` method with invalid input (e.g., invalid rating).
+   - **Setup:** Initializes an instance of the `IO` class and an empty list for employee data.
+   - **Test Steps:**
+     1. Uses the `input` function to simulate user input with invalid data.
+     2. Calls `input_employee_data` and asserts that the returned employee data is empty.
+     3. Asserts that the `print` function is called once with a specific error message.
+
+### 9. `test_input_employee_data_generic_exception`
+   - **Description:** Tests the `input_employee_data` method with a generic exception.
+   - **Setup:** Initializes an instance of the `IO` class and an empty list for employee data.
+   - **Test Steps:**
+     1. Uses the `input` function to simulate user input for a new employee.
+     2. Calls `input_employee_data` and asserts that the returned employee data is empty.
+     3. Asserts that the `print` function is called once with a specific error message.
+
+## Running the Tests
+The script includes the standard `unittest.main()` block to execute the test cases when the script is run.
+
+```python
+if __name__ == "__main__":
+    unittest.main()
