@@ -95,6 +95,18 @@ from unittest.mock import patch
 from presentation_classes import IO
 from data_classes import Employee
 
+# Unit Test Script for IO Class
+
+## Description:
+This script contains unit tests for the `IO` class methods. The `IO` class is responsible for handling input and output operations related to employee data and error messages.
+
+```python
+import unittest
+from unittest.mock import patch
+from presentation_classes import IO
+from data_classes import Employee
+
+
 
 ### 1. `test_output_error_messages`
    - **Description:** Tests the `output_error_messages` method.
