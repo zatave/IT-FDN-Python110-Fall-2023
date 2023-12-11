@@ -171,3 +171,65 @@ if __name__ == "__main__":
     unittest.main()
 
 
+# FileProcessor Unit Test Script
+
+This script contains unit tests for the `FileProcessor` class, which is responsible for reading and writing employee data to and from a JSON file. The script uses the `unittest` framework.
+
+## Test Cases
+
+### `test_read_employee_data_from_file`
+-  Tests the successful reading of employee data from a JSON file.
+- **Steps:**
+  1. Mock the `open` function and provide JSON data.
+  2. Call `FileProcessor.read_employee_data_from_file`.
+  3. Validate the returned employee data.
+
+### `test_read_employee_data_from_file_file_not_found`
+-  Tests the case where the specified file is not found.
+- **Steps:**
+  1. Try to read employee data from a nonexistent file.
+  2. Expect a `FileNotFoundError` to be raised.
+
+### `test_read_employee_data_from_file_generic_exception`
+- Tests the case where a generic exception occurs during file reading.
+- **Steps:**
+  1. Mock the `open` function to raise an exception.
+  2. Call `FileProcessor.read_employee_data_from_file`.
+  3. Expect the raised exception to be caught.
+
+### `test_write_employee_data_to_file`
+- Tests the successful writing of employee data to a JSON file.
+- **Steps:**
+  1. Mock the `open` function.
+  2. Call `FileProcessor.write_employee_data_to_file`.
+  3. Validate that the file is opened with the correct parameters.
+  4. Validate that the data is written to the file.
+
+### `test_write_employee_data_to_file_type_error`
+-  Tests the case where a `TypeError` occurs during file writing.
+- **Steps:**
+  1. Mock the `open` function and simulate a `TypeError` during writing.
+  2. Call `FileProcessor.write_employee_data_to_file`.
+  3. Expect a `TypeError` to be raised.
+
+### `test_write_employee_data_to_file_permission_error`
+- Tests the case where a `PermissionError` occurs during file writing.
+- **Steps:**
+  1. Mock the `open` function and simulate a `PermissionError` during writing.
+  2. Call `FileProcessor.write_employee_data_to_file`.
+  3. Expect a `PermissionError` to be raised.
+
+### `test_write_employee_data_to_file_generic_exception`
+- Tests the case where a generic exception occurs during file writing.
+- **Steps:**
+  1. Mock the `open` function and simulate a generic exception during writing.
+  2. Call `FileProcessor.write_employee_data_to_file`.
+  3. Expect the raised exception to be caught.
+
+## Execution
+- Executes the unit tests if the script is run as the main module.
+- **Steps:**
+  1. Run unit tests using `unittest.main()`.
+
+
+
