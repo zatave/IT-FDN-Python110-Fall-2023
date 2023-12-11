@@ -89,7 +89,12 @@ This script essentially provides a user-friendly interface for managing employee
 ## Description
 This script holds unit tests for methods within the `IO` class from the `presentation_classes` module. the tests cover input and ouput funcions for error messages, menu output, and processing input of employee data. 
 
-## Test Cases
+```python
+import unittest
+from unittest.mock import patch
+from presentation_classes import IO
+from data_classes import Employee
+
 
 ### 1. `test_output_error_messages`
    - **Description:** Tests the `output_error_messages` method.
@@ -166,46 +171,3 @@ if __name__ == "__main__":
     unittest.main()
 
 
-
-
-Test Class: TestIO
-Method: setUp
-Description: Set up a common state for the test cases by initializing an empty list for employee data.
-Method: test_output_error_messages
-Description: Test the output_error_messages method.
-Behavior:
-Mock the print function and ensure that it is called once with the expected error message and formatting.
-Method: test_output_error_messages_with_exception
-Description: Test the output_error_messages method with an exception.
-Behavior:
-Mock the print function and ensure that it is called once with the expected formatted error message, including the exception details.
-Method: test_output_menu
-Description: Test the output_menu method.
-Behavior:
-Mock the print function and ensure that it is called once with the provided menu text.
-Method: test_input_menu_choice
-Description: Test the input_menu_choice method.
-Behavior:
-Mock the input function to simulate user input ("2") and assert that the returned choice matches the expected value.
-Method: test_input_menu_choice_invalid_choice
-Description: Test the input_menu_choice method with an invalid choice.
-Behavior:
-Mock the input function to simulate user input ("5") and ensure that the correct error message is printed.
-Method: test_output_employee_data
-Description: Test the output_employee_data method.
-Behavior:
-Create a sample list of Employee objects and ensure that the print function is called once with the expected formatted output.
-Method: test_input_employee_data
-Description: Test the input_employee_data method.
-Behavior:
-Mock the input function to simulate user input for an employee, and assert that the returned employee data is correctly processed and matches the expected values.
-Method: test_input_employee_data_value_error
-Description: Test the input_employee_data method with an invalid rating input.
-Behavior:
-Mock the input function to simulate user input with an invalid rating and ensure that the correct error message is printed.
-Method: test_input_employee_data_generic_exception
-Description: Test the input_employee_data method with a generic exception.
-Behavior:
-Mock the input function to simulate user input for an employee, but raise a generic exception during processing. Ensure that the correct error message is printed.
-Method: main
-Description: Execute the unit tests if the script is run as the main module.
